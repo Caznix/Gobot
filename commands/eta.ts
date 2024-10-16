@@ -48,7 +48,7 @@ export class Eta {
   async message([message]: ArgsOf<"messageCreate">) {
     var index: number = Math.floor(Math.random() * Options.length);
     var result = Options[index];
-    if (message.content.startsWith("eta")) {
+    if (message.content.startsWith("eta ")) {
       await message.reply(`${result}`)
     }
   }
